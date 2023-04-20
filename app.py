@@ -10,6 +10,12 @@ import base64
 from io import BytesIO
 from datetime import datetime
 
+user= st.secrets["user"]
+passy= st.secrets["passy"]
+acco= st.secrets["acco"]
+wh=st.secrets["wh"]
+dbase=st.secrets["dbase"]
+shema=st.secrets["shema"]
 
 st.sidebar.title('Easy Inventory Planner')
 st.sidebar.header('Content')
