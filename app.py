@@ -32,12 +32,12 @@ if yan_sayfa_secenek == 'Analyses' :
   'statcounter eklemeyi unutma'
   
   conn = snowflake.connector.connect(
-      user='OZGURDUGMECI',
-      password='Alterego.8019',
-      account='fj01041.europe-west2.gcp',
-      warehouse='HANGAR',
-      database='DEMO2',
-      schema='INFORMATION_SCHEMA'
+      user=user,
+      password=passy,
+      account=acco,
+      warehouse=wh,
+      database=dbase,
+      schema=schema
   )
    
   
