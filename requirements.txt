@@ -72,7 +72,7 @@ Send2Trash==1.5.0
 six==1.15.0
 snowflake-connector-python==3.0.2
 sqlparse==0.3.1
-streamlit==0.64.0
+streamlit==1.1.0
 terminado==0.8.3
 testpath==0.4.4
 toml==0.10.1
