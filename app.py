@@ -28,27 +28,30 @@ yan_sayfa_secenek = st.sidebar.radio(
 if yan_sayfa_secenek == 'Analyses' :
  'Connecting snowflake cloud :)'
  time.sleep(4)
-  #try:
- 'statcounter eklemeyi unutma'
+ try:
+  'statcounter eklemeyi unutma'
  
- conn = snowflake.connector.connect(
-     user='OZGURDUGMECI',
-     password='Alterego.8019',
-     account='fj01041.europe-west2.gcp',
-     warehouse='HANGAR',
-     database='DEMO2',
-     schema='INFORMATION_SCHEMA'
- )
+  conn = snowflake.connector.connect(
+      user='OZGURDUGMECI',
+      password='Alterego.8019',
+      account='fj01041.europe-west2.gcp',
+      warehouse='HANGAR',
+      database='DEMO2',
+      schema='INFORMATION_SCHEMA'
+  )
   
  
- cur = conn.cursor()
- cur.execute('select * from SALES3')
- # Commit the transaction
- rows = cur.fetchall()
- # Close the cursor and connection
- cur.close()
- conn.close()
-  
+  cur = conn.cursor()
+  cur.execute('select * from SALES3')
+  # Commit the transaction
+  rows = cur.fetchall()
+  # Close the cursor and connection
+  cur.close()
+  conn.close()
+ except:
+  'Connection failed. Please refresh the link.'
+  'Or use this app -> https://inventory-planner.streamlit.app/ '
+  st.stop()
  'Analysis has just started.' 
  time.sleep(2)   
  df=pd.DataFrame(rows) 
@@ -183,10 +186,7 @@ if yan_sayfa_secenek == 'Analyses' :
   'The table shows the products which have no sales in last 80 days.'
   df_sfr=df_sfr.reset_index(drop=True)
   st.dataframe(df_sfr)   
- #except:
- 'Connection failed. Please refresh the link.'
- 'Or use this app -> https://inventory-planner.streamlit.app/ '
-
+ 
 elif yan_sayfa_secenek == 'Easy Inventory Planner' :
  st.title('Easy Inventory Planner')
  
