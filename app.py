@@ -29,7 +29,7 @@ if yan_sayfa_secenek == 'Analyses' :
  'Connecting snowflake cloud :)'
  time.sleep(4)
  try:
-  'statcounter eklemeyi unutma'
+  #'statcounter eklemeyi unutma'
  
   conn = snowflake.connector.connect(
       user='OZGURDUGMECI',
