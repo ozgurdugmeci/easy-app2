@@ -52,7 +52,7 @@ if yan_sayfa_secenek == 'Analyses' :
   'Connection failed. Please refresh the link.'
   'Or use this app -> https://inventory-planner.streamlit.app/ '
   st.stop()
- 'Analysis has just started.' 
+ 'Analyses has just started.' 
  time.sleep(2)   
  df=pd.DataFrame(rows) 
  df.columns=['Product','Inventory','Sales20','Sales40','Sales60','Sales80'] 
