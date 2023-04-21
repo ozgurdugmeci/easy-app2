@@ -170,13 +170,17 @@ if yan_sayfa_secenek == 'Analyses' :
  linko_final= f'<a href="data:file/csv;base64,{b64}" download={isim}>Download Analysed Data</a>'
  st.markdown(linko_final, unsafe_allow_html=True)  
  
- df_analiz_show= df_analiz[['Product','Inventory','Category','Stock_Cover', 'Predicted_Sales']].copy()
+ df_analiz_show= df_analiz[['Product','Inventory','Category','Stock_Cover', 'Predicted_Sales','Sales20','Sales40','Sales60','Sales80']].copy()
  
  df_analiz_show['Predicted_Sales']= df_analiz_show['Predicted_Sales'].round(0)
  df_analiz_show['Stock_Cover']= df_analiz_show['Stock_Cover'].round(0)
  
  df_analiz_show['Stock_Cover']=df_analiz_show['Stock_Cover'].astype(int)
  df_analiz_show['Predicted_Sales']=df_analiz_show['Predicted_Sales'].astype(int)
+ df_analiz_show['Sales20']=df_analiz_show['Sales20'].astype(int)
+ df_analiz_show['Sales40']=df_analiz_show['Sales40'].astype(int)
+ df_analiz_show['Sales60']=df_analiz_show['Sales60'].astype(int)
+ df_analiz_show['Sales80']=df_analiz_show['Sales80'].astype(int)   
  df_analiz_show=df_analiz_show.reset_index(drop=True)
  st.dataframe(df_analiz_show)
  
