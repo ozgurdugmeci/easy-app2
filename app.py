@@ -151,6 +151,7 @@ if yan_sayfa_secenek == 'Analyses' :
  df_tutarlk.drop(['Kum'], inplace=True, axis=1)
  df_tutarlk.columns= ['Category','Product_Count','Ratio']
  df_tutarlk=df_tutarlk.sort_values(by='Ratio', ascending=False)
+ df_tutarlk=df_tutarlk.reset_index(drop=True)
  total_product= str(total_product) + ' products analysed'
  #df.style.format("{:.2%}")
  #df.style.format({'B': "{:0<4.0f}", 'D': '{:+.2f}'})
