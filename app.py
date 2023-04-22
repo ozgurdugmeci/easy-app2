@@ -26,7 +26,7 @@ yan_sayfa_secenek = st.sidebar.radio(
 
 
 if yan_sayfa_secenek == 'Analyses' :
- 'Connecting snowflake cloud :)'
+ 'Connecting snowflake cloud.'
  time.sleep(4)
  try:
   #'statcounter eklemeyi unutma'
