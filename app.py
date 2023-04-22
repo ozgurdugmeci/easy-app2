@@ -202,7 +202,7 @@ elif yan_sayfa_secenek == 'Easy Inventory Planner' :
  valuable insights for demand planning and inventory management. </br> </br> However, it is important to note that demand planning is a complex process that involves many different factors, \
  including market trends, customer behavior, and supply chain disruptions. Therefore it should be regularly reviewed and updated \
  to ensure it remains relevant and accurate and including other variables to the model, such as marketing campaigns, product information, pricing changes, or seasonal trends,\
- that may impact sales can help make it more comprehensive and accurate. </br> </br> 1- Getting data from Snowflake Cloud (Sales and Inventory Quantity Data) </br> \
+ that may impact sales canvmake it more comprehensive and accurate. </br> </br> 1- Getting data from Snowflake Cloud (Sales and Inventory Quantity Data) </br> \
  2- Model creates labels by analysing sales data for each product. </br> 3- Model makes sales predictions and calculates stock cover days. </p>'
  ' ' 
  st.markdown(metin2,unsafe_allow_html=True) 
