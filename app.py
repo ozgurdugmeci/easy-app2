@@ -157,7 +157,8 @@ if yan_sayfa_secenek == 'Analyses' :
  df_tutarlk= df_tutarlk.style.format({'Ratio': '{:.0%}'})
  st.info('A- Predictability Analysis') 
  total_product
- df_tutarlk = df_tutarlk.reset_index()
+ df_tutarlk=df_tutarlk.reset_index(drop=True)
+ #df_tutarlk = df_tutarlk.reset_index()
  st.dataframe(df_tutarlk)
  'Predictability Analysis shows the quality of inventory management. The higher percentage of the "Predictable Sales" ratio indicates the good quality of the inventory management.'
  #download_data
