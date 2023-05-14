@@ -50,7 +50,7 @@ if yan_sayfa_secenek == 'Analyses' :
   conn.close()
  except:
   'Connection failed. Please refresh the link.'
-  'Or use this app -> https://inventory-planner.streamlit.app/ '
+  'Or use this app -> https://demandplanningtool.streamlit.app/ '
   st.stop()
  'Analyses have just started.' 
  time.sleep(2)   
